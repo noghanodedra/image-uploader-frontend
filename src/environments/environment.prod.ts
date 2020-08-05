@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
-};
+         uploadApiUrl: 'http://prod-host:4000/api/v1/uploads',
+         production: true,
+         allowedImageFileTypes: 'JPEG, PNG',
+         allowedImageFileSizeKB: 500,
+       };

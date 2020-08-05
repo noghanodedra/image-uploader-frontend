@@ -1,0 +1,36 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+.app-container {
+  background-color: rgba(25, 118, 210, 0.05);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  position: absolute;
+  top: 40px;
+  color: royalblue;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.loader {
+  position: absolute;
+  top: 200px;
+  font-size: 18px;
+}
+.server-error {
+  position: absolute;
+  top: 230px;
+  color: red;
+  font-size: 18px;
+}
+.success {
+  position: absolute;
+  top: 230px;
+  color: green;
+  font-size: 18px;
+}
