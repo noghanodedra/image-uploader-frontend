@@ -49,8 +49,8 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const app = fixture.componentInstance;
 
-    spyOn(imageUploadService, 'upload');
-    spyOn(app, 'markAllAsDirty');
+    spyOn(imageUploadService, 'upload').and.callThrough();
+    spyOn(app, 'markAllAsDirty').and.callThrough();
 
     const fakeEvent = { preventDefault: () => console.log('preventDefault') };
     fixture.debugElement
@@ -70,7 +70,7 @@ describe('AppComponent', () => {
 
     app.uploadForm.controls.description.setValue('test');
     app.uploadForm.controls.file.setValue(file);
-    spyOn(app, 'markAllAsDirty');
+    spyOn(app, 'markAllAsDirty').and.callThrough();
     spyOn(imageUploadService, 'upload').and.
                 returnValue(of('success'));
 

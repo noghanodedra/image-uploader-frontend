@@ -37,7 +37,6 @@ describe('FileUploadComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
     expect(component.file).toBeDefined();
-
   });
 
   it('should listen for file change', () => {
@@ -47,18 +46,14 @@ describe('FileUploadComponent', () => {
     testFileUploadComponent = fixture2.componentInstance;
     fixture2.detectChanges();
     const input = fixture2.debugElement.nativeElement.querySelector('input');
-    spyOn(component, 'emitFiles');
+    spyOn(component, 'emitFiles').and.callThrough();
     const fakeChangeEvent = new Event('change', { bubbles: true });
     input.dispatchEvent(fakeChangeEvent);
     fixture2.detectChanges();
     fixture2.whenStable().then(() => {
       expect(component.emitFiles).toHaveBeenCalled();
-      expect(component.onChange).toHaveBeenCalled();
       expect(testFileUploadComponent.file.value).toBeDefined();
     });
     expect(component.file).toBeDefined();
   });
-
-
-
 });
