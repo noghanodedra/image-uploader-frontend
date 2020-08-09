@@ -4,7 +4,7 @@ import {
 } from '@angular/common/http/testing';
 import { HttpResponse } from '@angular/common/http';
 
-import { environment } from './../environments/environment';
+import { environment } from '../../environments/environment';
 import { ImageUploadService } from './image-upload.service';
 
 describe('ImageUploadService', () => {

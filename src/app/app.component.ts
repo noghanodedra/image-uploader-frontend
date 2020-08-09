@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { ImageUploadService } from '../services/image-upload.service';
+import { ImageUploadService } from './services/image-upload.service';
 import {
   allowedFileType,
   allowedFileSize,
@@ -54,7 +54,7 @@ export class AppComponent {
           this.error = error;
           this.success = false;
           this.loading = false;
-\        }
+        }
       );
   }
 

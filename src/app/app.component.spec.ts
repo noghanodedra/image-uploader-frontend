@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FileUploadComponent } from './file-upload/file-upload.component';
-import { ImageUploadService } from '../services/image-upload.service';
+import { ImageUploadService } from '../app/services/image-upload.service';
 import { Observable, of } from 'rxjs';
 import { By } from '@angular/platform-browser';
 

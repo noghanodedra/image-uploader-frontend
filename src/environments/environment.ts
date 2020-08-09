@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-         uploadApiUrl: 'http://localhost:4000/api/v1/uploads',
+         uploadApiUrl: 'http://localhost:8080/api/v1/uploads',
          production: false,
          allowedImageFileTypes: 'JPEG, PNG',
          allowedImageFileSizeKB: 500,
