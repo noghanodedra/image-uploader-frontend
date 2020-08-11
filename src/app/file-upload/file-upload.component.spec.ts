@@ -1,8 +1,8 @@
+import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FileUploadComponent } from './file-upload.component';
-import { DebugElement, Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { FileUploadComponent } from './file-upload.component';
+
 
 @Component({
   // tslint:disable-next-line: component-selector

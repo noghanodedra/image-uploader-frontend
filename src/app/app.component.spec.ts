@@ -1,12 +1,12 @@
-import { TestBed, async, tick } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { AppComponent } from './app.component';
+import { async, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { ImageUploadService } from '../app/services/image-upload.service';
-import { Observable, of } from 'rxjs';
 import { By } from '@angular/platform-browser';
+import { of } from 'rxjs';
+import { ImageUploadService } from '../app/services/image-upload.service';
+import { AppComponent } from './app.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
+
 
 describe('AppComponent', () => {
 

@@ -3,11 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-         uploadApiUrl: 'http://localhost:8080/api/v1/uploads',
-         production: false,
-         allowedImageFileTypes: 'JPEG, PNG',
-         allowedImageFileSizeKB: 500,
-       };
+  uploadApiUrl: 'http://localhost:8080/api/v1/images/upload',
+  production: false,
+  allowedImageFileTypes: 'JPEG, PNG',
+  allowedImageFileSizeKB: 500,
+};
 
 /*
  * For easier debugging in development mode, you can import the following file

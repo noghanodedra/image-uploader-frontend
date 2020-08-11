@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -14,6 +14,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class FileUploadComponent implements OnInit, ControlValueAccessor {
+  // tslint:disable-next-line: ban-types
   onChange: Function;
   file: File | null = null;
 
@@ -34,8 +35,10 @@ export class FileUploadComponent implements OnInit, ControlValueAccessor {
     this.file = null;
   }
 
+  // tslint:disable-next-line: ban-types
   registerOnChange(fn: Function): void {
     this.onChange = fn;
   }
+  // tslint:disable-next-line: ban-types
   registerOnTouched(fn: Function): void {}
 }

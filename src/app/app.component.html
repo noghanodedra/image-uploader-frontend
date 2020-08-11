@@ -5,7 +5,13 @@
     {{ error.statusText }}
   </div>
   <div class="success" *ngIf="success">
-    File uploaded succeessfully.
+    Success
+  </div>
+  <div
+    class="server-error"
+    *ngIf="uploadForm.status === 'INVALID' && uploadForm.touched && formInvalid"
+  >
+    Failed
   </div>
 
   <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
@@ -41,7 +47,7 @@
       </div>
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="loading">
-      Submit
+      Submit image
     </button>
   </form>
 </div>

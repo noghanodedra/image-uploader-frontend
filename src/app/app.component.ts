@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { ImageUploadService } from './services/image-upload.service';
-import {
-  allowedFileType,
-  allowedFileSize,
-} from './validators/file-validators';
 import { environment } from './../environments/environment';
+import { ImageUploadService } from './services/image-upload.service';
+import { allowedFileSize, allowedFileType } from './validators/file-validators';
+
+
+
+
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -28,6 +32,7 @@ export class AppComponent {
   });
   success = false;
   loading = false;
+  formInvalid = false;
   error: any;
 
   constructor(private imageUploadService: ImageUploadService) {}
@@ -35,10 +40,13 @@ export class AppComponent {
   onSubmit(): void {
     this.success = false;
     this.loading = true;
+    this.formInvalid = false;
     this.error = null;
 
     if (!this.uploadForm.valid) {
       this.markAllAsDirty(this.uploadForm);
+      this.loading = false;
+      this.formInvalid = true;
       return;
     }
 

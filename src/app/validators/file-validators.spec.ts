@@ -23,7 +23,6 @@ describe('File Validators - allowedFileSize', () => {
   });
 });
 
-
 describe('File Validators - allowedFileType', () => {
   const ALLOWED_FILE_TYPES = ['JPG', 'PNG'];
   it('should return allowedFileType=true for invalid file type ', () => {

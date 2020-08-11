@@ -1,11 +1,12 @@
-import { TestBed } from '@angular/core/testing';
-import {
-  HttpClientTestingModule, HttpTestingController,
-} from '@angular/common/http/testing';
 import { HttpResponse } from '@angular/common/http';
-
+import {
+  HttpClientTestingModule,
+  HttpTestingController
+} from '@angular/common/http/testing';
+import { TestBed } from '@angular/core/testing';
 import { environment } from '../../environments/environment';
 import { ImageUploadService } from './image-upload.service';
+
 
 describe('ImageUploadService', () => {
   let service: ImageUploadService;
@@ -46,5 +47,4 @@ describe('ImageUploadService', () => {
       req.event(expectedResponse);
     });
   });
-
 });
